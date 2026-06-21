@@ -10,6 +10,15 @@ linters:
     - misspell
     - revive
     - gocritic
+  exclusions:
+    rules:
+      # Every JSContact object type implements json.Marshaler/Unmarshaler with
+      # a uniform one-line wrapper around the shared helpers in codec.go; the
+      # behavior is documented there, so per-method comments would only repeat
+      # it. The exported rule stays strict for all other symbols.
+      - linters:
+          - revive
+        source: "func .*\\) (MarshalJSON|UnmarshalJSON)\\("
 
 formatters:
   enable:

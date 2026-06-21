@@ -1,0 +1,11 @@
+{
+  "@type": "Card",
+  "version": "1.0",
+  "uid": "ae2640e9-2d04-4f5b-a4d9-0a7b9b0f1f3e",
+  "kind": "group",
+  "name": { "@type": "Name", "full": "The Doe Family" },
+  "members": {
+    "urn:uuid:03a0e51f-d1aa-4385-8a53-e29025acd8af": true,
+    "urn:uuid:b8767877-b4a1-4c70-9acc-505d3819e519": true
+  }
+}

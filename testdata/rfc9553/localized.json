@@ -1,0 +1,13 @@
+{
+  "@type": "Card",
+  "version": "1.0",
+  "uid": "loc-1",
+  "language": "en",
+  "name": { "@type": "Name", "full": "Gabriel García" },
+  "titles": { "t1": { "@type": "Title", "name": "Manager" } },
+  "localizations": {
+    "es": {
+      "titles/t1/name": "Gerente"
+    }
+  }
+}

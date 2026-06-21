@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:4.0
+UID:urn:uuid:b8767877-b4a1-4c70-9acc-505d3819e519
+KIND:individual
+FN:Simon Perreault
+N:Perreault;Simon;;;ing. jr,M.Sc.
+ORG:Viagenie;Engineering
+TITLE:Senior Engineer
+EMAIL;TYPE=work;PREF=1:simon.perreault@viagenie.ca
+TEL;TYPE="work,voice";VALUE=uri:tel:+1-418-656-9254
+ADR;TYPE=work:;Suite D2-630;2875 Laurier;Quebec;QC;G1V 2M2;Canada
+URL;TYPE=home:http://nomis80.org
+NOTE:Likes cycling.
+CATEGORIES:internet,ietf
+BDAY:--0203
+END:VCARD

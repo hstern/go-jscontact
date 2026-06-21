@@ -1,0 +1,55 @@
+{
+  "@type": "Card",
+  "version": "1.0",
+  "uid": "22B2C7DF-9120-4969-8460-05956FE6B065",
+  "kind": "individual",
+  "language": "en",
+  "name": {
+    "@type": "Name",
+    "components": [
+      { "@type": "NameComponent", "kind": "title", "value": "Dr." },
+      { "@type": "NameComponent", "kind": "given", "value": "John" },
+      { "@type": "NameComponent", "kind": "surname", "value": "Doe" }
+    ],
+    "isOrdered": true
+  },
+  "nicknames": {
+    "k391": { "@type": "Nickname", "name": "Johnny" }
+  },
+  "organizations": {
+    "o1": { "@type": "Organization", "name": "Example", "units": [ { "@type": "OrgUnit", "name": "Engineering" } ] }
+  },
+  "titles": {
+    "t1": { "@type": "Title", "name": "Staff Engineer", "kind": "title" }
+  },
+  "emails": {
+    "e1": { "@type": "EmailAddress", "contexts": { "work": true }, "address": "jdoe@example.com", "pref": 1 }
+  },
+  "phones": {
+    "p1": { "@type": "Phone", "number": "tel:+1-555-0100", "features": { "voice": true, "mobile": true }, "contexts": { "work": true } }
+  },
+  "onlineServices": {
+    "x1": { "@type": "OnlineService", "service": "Mastodon", "uri": "https://example.social/@jdoe" }
+  },
+  "addresses": {
+    "a1": {
+      "@type": "Address",
+      "components": [
+        { "@type": "AddressComponent", "kind": "name", "value": "1 Main St" },
+        { "@type": "AddressComponent", "kind": "locality", "value": "Zürich" },
+        { "@type": "AddressComponent", "kind": "postcode", "value": "8000" },
+        { "@type": "AddressComponent", "kind": "country", "value": "Switzerland" }
+      ],
+      "countryCode": "CH",
+      "contexts": { "work": true }
+    }
+  },
+  "anniversaries": {
+    "an1": { "@type": "Anniversary", "kind": "birth", "date": { "@type": "PartialDate", "year": 1970, "month": 5, "day": 21 } }
+  },
+  "notes": {
+    "n1": { "@type": "Note", "note": "Met at the 2026 conference." }
+  },
+  "keywords": { "friend": true, "colleague": true },
+  "x-crm-id": "CRM-99887"
+}

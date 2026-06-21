@@ -20,6 +20,17 @@ jobs:
           check-latest: true
       - run: go test -race ./...
 
+  conformance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.26"
+          check-latest: true
+      - name: RFC 9553 / RFC 9555 conformance fixtures
+        run: go test -run TestConformance ./...
+
   static:
     runs-on: ubuntu-latest
     steps:

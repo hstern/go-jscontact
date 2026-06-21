@@ -96,12 +96,13 @@ func (c *Card) Validate() error {
 	if c.UID == "" {
 		v.add("uid", "is required (RFC 9553 §2.1.9)")
 	}
-	// members MUST NOT be set unless kind is "group" (RFC 9553 §2.1.6).
+	// members MUST NOT be set unless kind is "group" (RFC 9553 §2.1.6). Note
+	// that members, relatedTo, keywords, and localizations are String[…] maps
+	// keyed by UID / free string / language tag — not Id[…] maps — so their
+	// keys are not subject to the §1.4.1 Id restrictions.
 	if len(c.Members) > 0 && c.Kind != "group" {
 		v.add("members", `is only valid when kind is "group"`)
 	}
-	v.checkIDs("members", keys(c.Members))
-	v.checkIDs("relatedTo", keys(c.RelatedTo))
 
 	// Contact channels: required fields + pref + Id keys.
 	v.checkIDs("emails", keys(c.Emails))
@@ -196,11 +197,11 @@ func (c *Card) Validate() error {
 		}
 	}
 
-	// Other Id-keyed properties.
+	// Other Id-keyed properties (keywords is excluded: its keys are arbitrary
+	// keyword strings, not Ids).
 	v.checkIDs("nicknames", keys(c.Nicknames))
 	v.checkIDs("organizations", keys(c.Organizations))
 	v.checkIDs("titles", keys(c.Titles))
-	v.checkIDs("keywords", keys(c.Keywords))
 	v.checkIDs("notes", keys(c.Notes))
 	for k, n := range c.Notes {
 		if n.Note == "" {
